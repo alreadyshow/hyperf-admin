@@ -1,0 +1,17 @@
+############################################################
+# admin: admin
+# user: devops
+# date: 2021-12-28 08:41:37
+############################################################
+
+# 路径配置遵循ant路径配置规则
+# host@workspace: host必须是localhost, 并且只能是localhost
+# ==========================================================
+grant read on localhost@@ {
+    include backend
+}
+
+grant read on localhost@backend {
+    include /**
+}
+

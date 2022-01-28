@@ -1,0 +1,25 @@
+# hyperf/hyperf:8.0
+#
+# @link     https://www.hyperf.io
+# @document https://doc.hyperf.io
+# @contact  group@hyperf.io
+# @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+
+
+FROM alreadyshow/dszj-swoole:v3.4
+
+ENV TZ=Asia/Shanghai
+
+# ADD etc/php/license /home/license
+
+RUN ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
+    && echo "${TZ}" > /etc/timezone 
+    # && echo "loader.swoole_license_files=/home/license" >> /usr/local/etc/php/conf.d/docker-php-ext-swoole_loader80.ini
+    
+WORKDIR /var/www
+
+EXPOSE 9501
+
+# ENTRYPOINT [ "php", "/var/www/backend/bin/hyperf.php", "server:watch" ]
+ENTRYPOINT [ "tail", "-f", "/dev/null"]
+

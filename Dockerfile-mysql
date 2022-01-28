@@ -1,0 +1,18 @@
+FROM mysql:5.7
+
+# ARG TZ=PRC
+
+ENV TZ=Asia/Shanghai
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && mkdir -p /var/log/mysql-logbin/ /var/log/mysql \
+    && chown -R mysql:mysql /var/lib/mysql /var/log/mysql /var/log/mysql-logbin
+
+# Copy starting scripts file
+COPY etc/mysql/start.sh /root/start.sh
+
+# Run necessary services
+CMD ["/bin/bash", "/root/start.sh"]
+
+EXPOSE 3306
+

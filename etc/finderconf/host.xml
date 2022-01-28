@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cluster version="24">
+    <host name="php" displayName="袋鼠总检" url="http://finderweb:8080/finder" orderNum="1">
+        <workspace name="soap" displayName="webservice日志" work="/www/soap/runtime/logs" charset="utf-8" readonly="true" orderNum="1"/>
+        <workspace name="backend" displayName="后端日志管理" work="/www/backend/runtime/logs" charset="utf-8" readonly="true" orderNum="6"/>
+    </host>
+</cluster>

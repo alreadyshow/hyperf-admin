@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<host-groups version="1">
+    <host-group name="dszj" displayName="袋鼠总检系统" orderNum="1"/>
+</host-groups>

@@ -1,0 +1,29 @@
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+# ARG TZ=PRC
+
+ENV TZ=Asia/Shanghai
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone 
+#     mkdir -p /var/log/mysql-logbin/ && \
+#     chown -R mysql:root /var/lib/mysql /var/log/mysql /var/log/mysql-logbin
+
+# COPY etc/my.cnf /etc/mysql/conf.d/my.cnf
+
+# RUN chmod 644 /etc/mysql/my.cnf /etc/mysql/conf.d/my.cnf
+
+RUN mkdir -p /usr/config
+
+COPY ./etc/mssql/ /usr/config/
+
+# RUN chmod +x /usr/config/entrypoint.sh
+# RUN chmod +x /usr/config/configure-db.sh
+
+# ENTRYPOINT [ "/usr/config/entrypoint.sh" ] 
+# "/usr/config/entrypoint.sh && tail -F /usr/config/config.log"
+
+EXPOSE 1443
+
+CMD ["/bin/bash", "/usr/config/entrypoint.sh"]
+
+HEALTHCHECK --interval=15s CMD /opt/mssql-tools/bin/sqlcmd -U sa -P $SA_PASSWORD -Q "select 1" && grep -q "MSSQL CONFIG COMPLETE" /usr/config/config.log

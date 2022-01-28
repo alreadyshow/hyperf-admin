@@ -1,0 +1,8 @@
+CREATE DATABASE hyperf COLLATE Chinese_PRC_CS_AI_WS;
+GO
+USE hyperf;
+CREATE LOGIN hyperf WITH PASSWORD = 'hyperf@Admin123';
+CREATE USER hyperf FOR LOGIN hyperf;
+ALTER SERVER ROLE sysadmin ADD MEMBER [hyperf];
+GO
+

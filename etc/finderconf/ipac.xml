@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ipac version="1">
+    <appName>finderweb</appName>
+    <prefix>/finder</prefix>
+    <enabled>true</enabled>
+    <urls>
+        <url>
+            <path>/finder/third/order/callback/success.do</path>
+            <responseCode></responseCode>
+            <responseMessage><![CDATA[{"code":20000,"message":"Access Denied."}]]></responseMessage>
+            <whitelist>
+                # 每行一个IP规则, 支持5中语法
+                # 1. 192.168.1.*               通配符
+                # 2. 192.168.1.100             全匹配
+                # 3. 192.168.1.[100-160]       地址区间
+                # 3. 192.168.1.[100, 101, 102] 地址集合
+                # 4. 192.168.1.0/24            段地址
+                192.168.1.*
+                192.168.1.100
+                192.168.1.[100-160]
+                192.168.1.[100, 101, 102]
+                192.168.1.0/24
+            </whitelist>
+        <url>
+        <url>
+            <path>/finder/third/order/callback/success.do</path>
+            <responseCode></responseCode>
+            <responseMessage><![CDATA[{"code":20000,"message":"Access Denied."}]]></responseMessage>
+            <whitelist>
+                # 每行一个IP规则, 支持5中语法
+                # 1. 192.168.1.*               通配符
+                # 2. 192.168.1.100             全匹配
+                # 3. 192.168.1.[100-160]       地址区间
+                # 3. 192.168.1.[100, 101, 102] 地址集合
+                # 4. 192.168.1.0/24            段地址
+                192.168.1.*
+                192.168.1.100
+                192.168.1.[100-160]
+                192.168.1.[100, 101, 102]
+                192.168.1.0/24
+            </whitelist>
+        <url>
+    </urls>
+</ipac>
+

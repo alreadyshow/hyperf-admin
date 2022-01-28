@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jvm version="1">
+    <local name="finderweb1" type="jmx" keywords="Tomcat-8.5.11-1" interval="5" enabled="false"></local>
+    <local name="finderweb2" type="jmx" keywords="Tomcat-8.5.11-2" interval="5" enabled="false"></local>
+    <remote name="192.168.1.31" type="jmx" host="192.168.1.31" port="8999" userName="" password="" interval="5" enabled="false"/>
+    <remote name="192.168.1.32" type="jmx" host="192.168.1.32" port="8999" userName="" password="" interval="5" enabled="false"/>
+    <remote name="192.168.1.33" type="jmx" host="192.168.1.33" port="8999" userName="" password="" interval="5" enabled="false"/>
+</jvm>
