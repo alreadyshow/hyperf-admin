@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3bee53961aedd20ad74e6074035215a",
+    "content-hash": "baf30ad5577656238a4890f8b4281b50",
     "packages": [
         {
             "name": "casbin/casbin",
@@ -6012,6 +6012,56 @@
                 "source": "https://github.com/hyperf/testing/tree/v2.2.24"
             },
             "time": "2022-01-20T01:52:50+00:00"
+        },
+        {
+            "name": "hyperf/watcher",
+            "version": "v2.2.24",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/watcher.git",
+                "reference": "596e6835df590bb38eac27e16f2766b5e686e8d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/watcher/zipball/596e6835df590bb38eac27e16f2766b5e686e8d4",
+                "reference": "596e6835df590bb38eac27e16f2766b5e686e8d4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": ">=4.5",
+                "hyperf/command": "~2.2.0",
+                "hyperf/di": "~2.2.0",
+                "hyperf/framework": "~2.2.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\Watcher\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyperf\\Watcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Hot reload watcher for Hyperf",
+            "keywords": [
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/watcher/issues",
+                "source": "https://github.com/hyperf/watcher/tree/v2.2.24"
+            },
+            "time": "2022-01-20T10:59:25+00:00"
         },
         {
             "name": "mockery/mockery",

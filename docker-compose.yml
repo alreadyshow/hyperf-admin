@@ -37,8 +37,6 @@ services:
             - php-fpm
         networks:
             my-app:
-                aliases:
-                    - "dszj.com"
 
     php-fpm:
         image: alreadyshow/dszj-fpm:base
@@ -160,23 +158,23 @@ services:
     #         - "8000:8000"
     #     networks:
     #         my-app:
-    finderweb:
-        # 默认账号： admin / dszj@Admin123 运维账号：devops / daishuV5
-        # build: 
-        #     context: .
-        #     dockerfile: Dockerfile-finderweb
-        image: adockero/finderweb
-        restart: always
-        container_name: finderweb
-        environment:
-            - TZ=RPC
-        volumes: 
-            - ./:/www/
-            - ./etc/finderconf/:/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/META-INF/conf/
-        ports: 
-            - "18080:8080"
-        networks:
-            my-app:
+    # finderweb:
+    #     # 默认账号： admin / dszj@Admin123 运维账号：devops / daishuV5
+    #     # build: 
+    #     #     context: .
+    #     #     dockerfile: Dockerfile-finderweb
+    #     image: adockero/finderweb
+    #     restart: always
+    #     container_name: finderweb
+    #     environment:
+    #         - TZ=RPC
+    #     volumes: 
+    #         - ./:/www/
+    #         - ./etc/finderconf/:/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/META-INF/conf/
+    #     ports: 
+    #         - "18080:8080"
+    #     networks:
+    #         my-app:
     
     # mssql:
     #     # build: 
